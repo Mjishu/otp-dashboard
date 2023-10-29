@@ -1,0 +1,165 @@
+/* todo: Page gets fucked when its not to normal scale; need to figure out the 'projects' part*/
+
+:root{
+    --tabBoard:#F0F0F0; /* Primary*/
+    --discovery:#4F709C;
+    --board:#213555;
+    --accent:#E5D283;
+}
+
+
+body{
+    display: grid;
+    grid-template-rows: repeat(10,10%);
+    grid-template-columns: repeat(10,10%);
+    height: 100vh;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    
+}
+
+#tabBoard{
+    background: var(--tabBoard);
+    grid-column: 1/ 3;
+    grid-row: 1/span10;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-top: 120px;
+    padding-left: 100px;
+    font-weight: 700;
+}
+
+.tabItem{
+    padding: 15px;
+}
+
+.header{
+    position: fixed;
+    left: 80px;
+    top: 10px;
+    font-size: 35px;
+    
+}
+
+#discovery{
+    background: var(--discovery);
+    grid-column: 3/ span 10;
+    grid-row: 1/3;
+    
+
+}
+
+.top{
+    display:flex;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchIcon{
+    position: absolute;
+    left: 500px;
+}
+
+.notificationBell{
+    position: absolute;
+    right: 500px;
+}
+
+.pfp{
+    position: absolute;
+    right: 400px;
+}
+
+.name{
+    margin-bottom: 30px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#board{
+    background: var(--board);
+    grid-column: 3/ span 9;
+    grid-row: 3/ span 9;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 15px;
+    align-content: center;
+    padding-left: 25px;
+    padding-top: 25px;
+
+}
+
+#projects{
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(autofit, minmax(300px,1fr));
+    grid-auto-rows: 1fr;
+    gap: 2rem 1rem;
+    
+}
+
+.boardItems{
+    background: var(--discovery);
+    border: white 1px solid;
+
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--board);
+}
+a:visited{
+    color: var(--board);
+}
+
+a:hover{
+    color: var(--discovery)
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.searchBar{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    flex: .5;
+    
+}
+
+.create{
+    border: none;
+    border-radius: 20px;
+    background: var(--tabBoard);
+    color: var(--board);
+    height: 35px;
+    width: 80px;
+}
+
+.create:hover{
+    background: var(--board);
+    color: var(--tabBoard);
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-right: 500px;
+}
+
+.intro{
+    position: absolute;
+    top: 70px;
+    left: 580px;
+    font-size: 20px;
+}
